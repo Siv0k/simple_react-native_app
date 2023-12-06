@@ -1,17 +1,15 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import FieldInit from './src/FieldInit';
-import GameScreen from './src/GameScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Minesweeper from './src/Minesweeper';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const App = () => {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator initialRouteName="FieldInit">
-				<Stack.Screen name="FieldInit" component={FieldInit} />
-				<Stack.Screen name="GameScreen" component={GameScreen} />
+			<Stack.Navigator>
+				<Stack.Screen name="Minesweeper" component={Minesweeper} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
